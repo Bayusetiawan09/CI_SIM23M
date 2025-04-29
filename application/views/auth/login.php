@@ -23,7 +23,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
-      <?php if (->this->session->flashdata('error')): ?>
+      <?php if ($this->session->flashdata('error')): ?>
         <p style="color:red;"><?= $this->session->flashdata('error');?></p>
         <?php endif;?>
       <form action="<?= site_url('auth/process_login')?>" method="post">
